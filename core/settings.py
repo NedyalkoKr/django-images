@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-m10c@k!u5b!y@=n%!9dxmc4#=q)q$)tdu$6$&w#1p_y107=2c_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-if not DEBUG:
+if os.environ.get('DEBUG') == False:
     ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 else:
     ALLOWED_HOSTS = []
@@ -89,7 +89,7 @@ DATABASES = {
     }
 }
 
-if not DEBUG:
+if os.environ.get('DEBUG') == False:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
