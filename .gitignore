@@ -259,5 +259,7 @@ modules.xml
 Scripts/
 include/
 pyvenv.cfg
+development.py
+.gitignore
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm+all,django
